@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>olos-code-editor Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.min.js"></script>
+  <script>
+    var codeEditor;
+
+    window.addEventListener('polymer-ready', function(e) {
+      console.log('ready!');
+      codeEditor = document.querySelector('olos-code-editor');
+      console.log(codeEditor);
+
+      // add a container
+
+      // var theEditor = codeEditor.shadowRoot.getElementsByClassName('CodeMirror')[0];
+      // console.log(theEditor);
+
+      // var container = document.createElement("div");
+      // container.id = "container";
+      // container.appendChild(theEditor);
+      // codeEditor.shadowRoot.appendChild(container);
+    });
+
+  </script>
+  <style>
+/*    body {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    olos-code-editor {
+      height: 100%;
+      width: 100%;
+    }*/
+
+  </style>
+  <link rel="import" href="olos-code-editor.html">
+  <link rel="import" href="../code-mirror/code-mirror.html">
+
+  <style>
+  </style>
+</head>
+<body unresolved>
+    <olos-code-editor>function() {console.log('what is happening');}</olos-code-editor>
+</body>
+</html>
