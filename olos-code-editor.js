@@ -33,8 +33,8 @@ function updateHints(editor) {
 
   Polymer({
 
-    width: 900,
-    height: 500,
+    width: 1480,
+    height: 1080,
     rootfolder: '../olos-code-editor/',
 
     // callback function to run when the code is changed
@@ -47,9 +47,17 @@ function updateHints(editor) {
       // this.setAttribute("style","width:"+this.width+"px; height: " + this.height +"px;");
       // this.style.content = this.style.content + "width: " + this.width+"px; height: " + this.height + "px";
       // console.log(this.style);
-      // this.mirror.options.mode = "javascript";
+      this.mirror.setOption('mode', 'javascript');
+      this.mirror.setOption('showCursorWhenSelecting', true);
+      this.mirror.setOption('pollInterval', 700);
+      this.mirror.setOption('workDelay', 7000);
+      this.mirror.setOption('autofocus', true);
+
+      this.mirror.getWrapperElement().style["font-size"] = 24+"px";
+      this.mirror.refresh();
+      // this.mirror.options.mode = {name: "javascript", json: true};
       // this.mirror.options.linenumbers = false;
-      this.theme = "cobalt";
+      // this.theme = "cobalt";
 
       // console.log(this.mirror.gutters);
       // this.mirror.options.gutters = ["CodeMirror-lint-markers"];
@@ -124,7 +132,6 @@ function updateHints(editor) {
     },
 
     _adjustDimensions: function() {
-      console.log(this);
       // console.log(this.$.container);
       if (typeof(this.$.container) !== 'undefined') {
         this.$.container.setAttribute("style","width:"+this.width+"px; height: " + this.height +"px;");

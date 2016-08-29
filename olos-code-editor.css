@@ -1,15 +1,17 @@
 :host {
   display: block;
   color: green;
-  height:100%;
+/*  height:100%;
   width:100%;
-  position:relative;
+*/  position:fixed;
   overflow:auto;
+  margin:auto;
+  font-size:24px !important;
 }
 
 olos-code-editor {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
 }
 
 #container {
@@ -35,8 +37,8 @@ olos-code-editor {
 }*/
 
 .CodeMirror {
-  width:auto;
-  height:auto;
+  width:100%;
+  height:100%;
 }
 
 /* The lint marker gutter */
